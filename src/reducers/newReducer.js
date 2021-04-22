@@ -1,17 +1,17 @@
-const SET_COUNT = "SET_COUNT";
+const SET_CATEGORY = "SET_CATEGORY";
 
 const initialState = {
 	isFetching: true,
-	count: 1,
+	users:[]
 };
 
 export default function newReducer(state = initialState, action) {
 	switch (action.type) {
-		case SET_COUNT:
-			return { ...state, count: action.payload };
+		case SET_CATEGORY:
+			return { ...state, users: action.payload };
 		default:
 			return state;
 	}
 }
 
-export const setCount = (count) => ({ type: SET_COUNT, payload: count });
+export const setRepos = (repos) => ({ type: SET_CATEGORY, payload: repos });
