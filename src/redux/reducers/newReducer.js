@@ -33,7 +33,6 @@ export const setIsFetching = (bool) => ({
 export const getCat = () => {
 	return async (dispatch) => {
 		dispatch(setIsFetching(true));
-
 		const response = await getCategory();
 		dispatch(setRepos(response.data));
 	};
